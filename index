@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Pantalla de Carga</title>
+  <style>
+    body {
+      background-color: #000;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    .explosion {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      animation: explode 2s ease-in-out infinite;
+    }
+
+    @keyframes explode {
+      0% {
+        width: 100px;
+        height: 100px;
+        transform: scale(1);
+        background: #ff5733;
+      }
+      50% {
+        width: 200px;
+        height: 200px;
+        transform: scale(1.5);
+        background: #33ff57;
+      }
+      100% {
+        width: 100px;
+        height: 100px;
+        transform: scale(1);
+        background: #5733ff;
+      }
+    }
+
+    .text {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 36px;
+      animation: bounce 2s ease-in-out infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="explosion"></div>
+  <p class="text">Si todo tardara tan poco en cargar, la vida sería mejor.</p>
+</body>
+</html>
